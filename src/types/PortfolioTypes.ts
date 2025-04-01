@@ -35,6 +35,7 @@ export interface Experience {
   location: string;
   startDate: string;
   endDate: string;
+  mode: string;
   description: string;
   achievements: string[];
 }
