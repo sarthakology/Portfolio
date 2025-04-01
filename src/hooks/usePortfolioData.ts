@@ -11,7 +11,8 @@ export const usePortfolioData = () => {
     try {
       // In a real application, you might fetch this from an API
       // For now, we're importing it directly
-      setData(portfolioData as PortfolioData);
+      setData(portfolioData as unknown as PortfolioData);
+
       setLoading(false);
     } catch (err) {
       setError('Failed to load portfolio data');

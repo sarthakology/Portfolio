@@ -8,7 +8,8 @@ import emailjs from "@emailjs/browser";
 const ContactPage = () => {
   const { data, loading } = usePortfolioData();
   const [pageLoading, setPageLoading] = useState(false);
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement | null>(null);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
@@ -42,9 +43,15 @@ const ContactPage = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    setPageLoading(true)
     e.preventDefault();
-
+    setPageLoading(true);
+  
+    if (!form.current) {
+      console.error("Form ref is null");
+      setPageLoading(false);
+      return;
+    }
+  
     emailjs
       .sendForm("service_momrrba", "template_z4fm7h2", form.current, {
         publicKey: "5JItNzawcpi4fb6fc",
@@ -52,17 +59,19 @@ const ContactPage = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          setName("")
-          setEmail("")
-          setMsg("")
-          setPageLoading(false)
+          setName("");
+          setEmail("");
+          setMsg("");
+          setPageLoading(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
           alert("Failed to send message, please try again.");
-        },
+          setPageLoading(false);
+        }
       );
   };
+  
 
   return (
     <div className="min-h-screen bg-white pt-20 dark:bg-gray-900">
