@@ -1,0 +1,13 @@
+[images]
+  remote_images = [
+    "https://images.unsplash.com/**"
+  ]
+
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

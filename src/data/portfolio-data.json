@@ -1,0 +1,156 @@
+{
+  "personal": {
+    "name": "Sarthak",
+    "title": "Full Stack Developer",
+    "bio": "I'm Passionate and detail-oriented MERN stack developer with a strong background in building scalable web and mobile applications. Experienced in React.js, React Native, Node.js, and MongoDB. Currently interning at C-DAC, where I am responsible for developing advanced calendar applications with cutting-edge features like JWT authentication, event/task management, and rolebased access. Skilled in delivering user-friendly solutions with a focus on performance, security, and scalability. I am eager to continuously learn and apply new technologies to solve complex problems effectively.",
+    "email": "thesarthakchauhan@gmail.com",
+    "phone": "+91 9821823744",
+    "location": "Gurgaon, Haryana",
+    "socialLinks": {
+      "github": "https://github.com/sarthakology",
+      "linkedin": "https://www.linkedin.com/in/sarthakch/",
+      "twitter": "https://twitter.com/"
+    },
+    "resumeUrl": "https://drive.usercontent.google.com/download?id=1njzDUeuG2vzFxxzroIERCtudiiBTbVix&export=download&authuser=0"
+  },
+  "skills": {
+    "technical": [  
+        "React.js",
+        "React Native",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Next.js",
+        "Express.js",
+        "MongoDB",
+        "MySQL",
+        "Python",
+        "SQL",
+        "Swift",
+        "C",
+        "C++",
+        "RESTful APIs",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "GitHub",
+        "Git"
+    ],
+    "soft": [
+      "Problem Solving",
+      "Communication",
+      "Teamwork",
+      "Time Management",
+      "Adaptability"
+    ]
+  },
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science Engineering",
+      "institution": "Maharishi Dayanand University",
+      "location": "Rohtak, Haryana",
+      "startDate": "2020",
+      "endDate": "2024"
+    },
+    {
+      "degree": "Higher Secondary School",
+      "institution": "GAV Public School",
+      "location": "Gurgaon, Haryana",
+      "startDate": "2020",
+      "endDate": "2019"
+    },
+    {
+      "degree": "Secondary School",
+      "institution": "GAV Public School",
+      "location": "Gurgaon, Haryana",
+      "startDate": "2018",
+      "endDate": "2017"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Web Development Intern",
+      "company": "C-DAC",
+      "location": "India",
+      "startDate": "2024",
+      "endDate": "Present",
+      "mode": "Full-Time",
+      "description": "Developing a full-stack calendar project with web and mobile app versions using React.js and React Native. Implemented JWT authentication, refresh token service, and guest invitation features.",
+      "achievements": [
+        "Built and deployed a scalable calendar application with event/task management.",
+        "Integrated role-based access for admin control over countries and languages.",
+        "Developed features like profile management, time format options, and multi-language support."
+      ]
+    },
+    {
+      "title": "Web Developer Intern",
+      "company": "AdGlobal360",
+      "location": "India",
+      "startDate": "2023",
+      "endDate": "2023",
+      "mode": "WFH",
+      "description": "Worked on web development projects, contributing to front-end design and back-end logic using React.js and Node.js.",
+      "achievements": [
+        "Optimized website performance, reducing load times by 30%.",
+        "Created reusable React components to improve development efficiency.",
+        "Collaborated with senior developers on API integration and UI improvements."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Fitness Plan Generator",
+      "description": "The Fitness-Plan-Generator is a React-based application designed to help users generate and manage personalized workout plans. It features an interactive interface for users to input their fitness goals and preferences, and it provides tailored workout recommendations based on the input data.",
+      "technologies": ["React", "Tailwind", "Google Gemini"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2Fgym-fitness.png?alt=media&token=501a3b6a-f944-4c00-9556-28dcc57eaa7e",
+      "liveUrl": "https://sarthakology.github.io/Fitness-Plan-Generator/",
+      "repoUrl": "https://github.com/sarthakology/Fitness-Plan-Generator",
+      "featured": false
+    },
+    {
+      "title": "Calendar",
+      "description": "The Google-calendar-clone-react frontend is a React-based project that replicates the user interface of Google Calendar. It includes features like event creation, editing, and calendar views (daily, weekly, monthly), providing an interactive and visually organized experience for users. The frontend integrates with a backend to handle data and event",
+      "technologies": ["React", "Tailwind"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2Fcalendar.png?alt=media&token=4557b845-db90-4fae-b7c1-ef47af63cca8",
+      "liveUrl": "https://sarthakology.github.io/react-calendar/",
+      "repoUrl": "https://github.com/sarthakology/react-calendar",
+      "featured": true
+    },
+    {
+      "title": "snake game",
+      "description": "An engaging Snake game built with React.js, featuring smooth controls, dynamic gameplay, and responsive design. Navigate the snake, collect points, and avoid collisions in this interactive web-based game. Designed for an immersive experience, it showcases React’s state management and rendering capabilities for seamless performance across devices.",
+      "technologies": ["React"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-01%20at%2010.16.42%E2%80%AFAM.png?alt=media&token=7e397dd3-960b-48ea-9b1f-cc63db368740",
+      "liveUrl": "https://snake-game-puce-three.vercel.app",
+      "repoUrl": "https://github.com/sarthakology/snake-game",
+      "featured": true
+    },
+    {
+      "title": "Dice bet",
+      "description": "A Dice Bet app built with React.js where users place bets on a dice roll to win or lose points. Featuring an intuitive UI, real-time updates, and dynamic animations, the app provides an exciting gambling-like experience while showcasing React's state management and event handling for smooth gameplay.",
+      "technologies": ["React"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-01%20at%2010.23.33%E2%80%AFAM.png?alt=media&token=2a582665-b460-43dd-9453-c33e79f96c4e",
+      "liveUrl": "https://sarthakology.github.io/dice-bet/",
+      "repoUrl": "https://github.com/sarthakology/dice-bet",
+      "featured": false
+    },
+    {
+      "title": "Calendar App",
+      "description": "The Google-calendar-clone-react-native frontend is a React-based project that replicates the user interface of Google Calendar. It includes features like event creation, editing, and calendar views (daily, weekly, monthly), providing an interactive and visually organized experience for users. The frontend integrates with a backend to handle data and event",
+      "technologies": ["React-native"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-01%20at%2010.49.50%E2%80%AFAM.png?alt=media&token=0933dca1-3fd1-4b68-9797-164f6227548b",
+      "liveUrl": "",
+      "repoUrl": "",
+      "featured": false
+    },
+    {
+      "title": "Calendar Backend",
+      "description": "The Google-calendar-clone-react-backend MERN project is a full-stack application that replicates the core features of Google Calendar using the MERN stack (MongoDB, Express, React, and Node.js). It allows users to create, edit, and manage events, with a React frontend handling the user interface and a backend built with Express and MongoDB for db",
+      "technologies": ["NodeJS","ExpressJS","MongoDB"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-01%20at%2010.55.44%E2%80%AFAM.png?alt=media&token=0bddfdad-419c-46a3-8965-29c610892736",
+      "liveUrl": "",
+      "repoUrl": "https://github.com/sarthakology/google-calendar-clone-react-backend",
+      "featured": false
+    }
+  ]
+}
