@@ -135,6 +135,15 @@
       "featured": false
     },
     {
+      "title": "QR-Code-Generator",
+      "description": "QR Code Generator is a React and Tailwind CSS app that converts URLs into QR codes with a download feature for easy access.",
+      "technologies": ["React" , "Tailwind"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-02%20at%2011.26.52%E2%80%AFAM.png?alt=media&token=446e5be4-c188-4a4f-be09-36c0ce8b1d31",
+      "liveUrl": "https://sarthakology.github.io/QR-Code-Generator/",
+      "repoUrl": "https://github.com/sarthakology/QR-Code-Generator",
+      "featured": false
+    },
+    {
       "title": "Calendar App",
       "description": "The Google-calendar-clone-react-native frontend is a React-based project that replicates the user interface of Google Calendar. It includes features like event creation, editing, and calendar views (daily, weekly, monthly), providing an interactive and visually organized experience for users. The frontend integrates with a backend to handle data and event",
       "technologies": ["React-native"],
