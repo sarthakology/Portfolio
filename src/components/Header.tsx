@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import usePortfolioData from '../hooks/usePortfolioData';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const { data, loading } = usePortfolioData();
@@ -44,31 +45,37 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          <Link to="/" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-            Home
-          </Link>
-          <Link to="/about" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-            About
-          </Link>
-          <Link to="/experience" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-            Experience
-          </Link>
-          <Link to="/projects" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-            Projects
-          </Link>
-          <Link to="/contact" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-            Contact
-          </Link>
-        </nav>
+        <div className="hidden md:flex items-center">
+          <nav className="flex space-x-8 mr-4">
+            <Link to="/" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+              About
+            </Link>
+            <Link to="/experience" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+              Experience
+            </Link>
+            <Link to="/projects" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+              Projects
+            </Link>
+            <Link to="/contact" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
+              Contact
+            </Link>
+          </nav>
+          <ThemeToggle />
+        </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center">
+          <ThemeToggle className="mr-2" />
+          <button
+            className="text-gray-600 dark:text-gray-300 focus:outline-none"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
