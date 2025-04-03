@@ -135,12 +135,21 @@
       "featured": false
     },
     {
-      "title": "QR-Code-Generator",
+      "title": "QR Code Generator",
       "description": "QR Code Generator is a React and Tailwind CSS app that converts URLs into QR codes with a download feature for easy access.",
       "technologies": ["React" , "Tailwind"],
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-02%20at%2011.26.52%E2%80%AFAM.png?alt=media&token=446e5be4-c188-4a4f-be09-36c0ce8b1d31",
       "liveUrl": "https://sarthakology.github.io/QR-Code-Generator/",
       "repoUrl": "https://github.com/sarthakology/QR-Code-Generator",
+      "featured": false
+    },
+    {
+      "title": "Wedding Gift Calculator",
+      "description": "Wedding Gift Calculator is a fun and interactive web app built with React and Tailwind CSS. It calculates gift rewards based on user inputs like age, salary, job type, land, and house ownership. The app dynamically assigns money and gifts and generates a downloadable PDF certificate for users.",
+      "technologies": ["React" , "Tailwind"],
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-03%20at%203.52.35%E2%80%AFPM.png?alt=media&token=35d37550-24b8-4517-8d44-4df34cd7cf38",
+      "liveUrl": "https://sarthakology.github.io/Wedding-Gift-Calculator/",
+      "repoUrl": "https://github.com/sarthakology/Wedding-Gift-Calculator",
       "featured": false
     },
     {
