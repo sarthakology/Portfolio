@@ -123,7 +123,7 @@
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-01%20at%2010.16.42%E2%80%AFAM.png?alt=media&token=7e397dd3-960b-48ea-9b1f-cc63db368740",
       "liveUrl": "https://snake-game-puce-three.vercel.app",
       "repoUrl": "https://github.com/sarthakology/snake-game",
-      "featured": true
+      "featured": false
     },
     {
       "title": "Dice bet",
@@ -159,7 +159,7 @@
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FScreenshot%202025-04-01%20at%2010.49.50%E2%80%AFAM.png?alt=media&token=0933dca1-3fd1-4b68-9797-164f6227548b",
       "liveUrl": "",
       "repoUrl": "",
-      "featured": false
+      "featured": true
     },
     {
       "title": "Calendar Backend",
