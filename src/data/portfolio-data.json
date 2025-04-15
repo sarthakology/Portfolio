@@ -69,12 +69,42 @@
   ],
   "experience": [
     {
+      "title": "Web Development",
+      "company": "Barça Academy India",
+      "location": "India",
+      "startDate": "2024",
+      "endDate": "Present",
+      "mode": "Hybrid",
+      "description": "Working as a Web Developer for Barça Academy India, responsible for developing and maintaining the official website, ensuring a responsive, user-friendly, and visually appealing digital experience.",
+      "achievements": [
+
+      ]
+    },
+    
+    {
+      "title": "Senior Video Editor",
+      "company": "ShreeSocioMedia",
+      "location": "India",
+      "startDate": "2024",
+      "endDate": "Present",
+      "mode": "Freelance",
+      "description": "As a Senior Video Editor at ShreeSocioMedia, I specialize in crafting high-quality video content that enhances brand storytelling and audience engagement. My role involves video production, editing, and post-production, ensuring visually compelling and engaging content for social media platforms.",
+      "achievements": [
+        "Edited over 300+ videos optimized for various social media platforms, increasing average engagement rates by 100+%.",
+        "Collaborated with creative teams to develop brand-aligned visual stories that boosted client retention.",
+        "Implemented an efficient post-production workflow, reducing turnaround time by 25%.",
+        "Utilized Final Cut Pro, Adobe PhotoShop, and other AI tools to create high-quality visual content.",
+        "Led a small team of junior editors, mentoring them in advanced editing techniques and creative storytelling."
+      ]
+      },
+      
+    {
       "title": "Web Development Intern",
       "company": "C-DAC",
       "location": "India",
       "startDate": "2024",
-      "endDate": "Present",
-      "mode": "Full-Time",
+      "endDate": "2025",
+      "mode": "On-site",
       "description": "Developing a full-stack calendar project with web and mobile app versions using React.js and React Native. Implemented JWT authentication, refresh token service, and guest invitation features.",
       "achievements": [
         "Built and deployed a scalable calendar application with event/task management.",
@@ -88,7 +118,7 @@
       "location": "India",
       "startDate": "2023",
       "endDate": "2023",
-      "mode": "WFH",
+      "mode": "Hybrid",
       "description": "Worked on web development projects, contributing to front-end design and back-end logic using React.js and Node.js.",
       "achievements": [
         "Optimized website performance, reducing load times by 30%.",
