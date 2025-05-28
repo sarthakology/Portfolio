@@ -2,7 +2,7 @@
   "personal": {
     "name": "Sarthak",
     "title": "Full Stack Developer",
-    "bio": "Passionate and detail-oriented MERN stack developer with a strong background in building scalable and responsive web and mobile applications. Proficient in React.js, React Native, Node.js, and MongoDB, with hands-on experience in delivering full-stack solutions from concept to deployment. Skilled in developing feature-rich applications incorporating JWT authentication, role-based access control, and seamless API integrations. Known for building user-centric and intuitive interfaces while maintaining high standards for performance, security, and scalability. Adept at collaborating in agile environments, writing clean and maintainable code, and optimizing user experiences across platforms. A proactive learner, consistently exploring new technologies and frameworks to stay ahead in the fast-evolving tech landscape. Dedicated to solving real-world problems through innovative and efficient software solutions.",
+    "bio": "Passionate and detail-oriented MERN stack developer with a strong background in building scalable web and mobile applications. Experienced in React.js, React Native, Node.js, MongoDB, and WordPress. Currently working as a Web Developer at Barça Academy India, maintaining and enhancing their WordPress website using Elementor Pro. Previously interned at C-DAC, developing advanced calendar applications with JWT authentication, task/event management, and role-based access. Committed to delivering secure, high-performance solutions with a focus on user experience and continuous learning.",
     "email": "thesarthakchauhan@gmail.com",
     "phone": "+91 9821823744",
     "location": "Gurgaon, Haryana",
@@ -11,7 +11,7 @@
       "linkedin": "https://www.linkedin.com/in/sarthakch/",
       "twitter": "https://twitter.com/"
     },
-    "resumeUrl": "https://drive.usercontent.google.com/download?id=1IWLAJB42umwuOahxuGNJOYg_E6q_0sBT&export=download&authuser=1&confirm=t&uuid=f086a9a6-a2f0-4378-8d65-c062b23273fc&at=APcmpoxF6t6hyzRzxsd9aweIpcaC:1743677132757"
+    "resumeUrl": "https://drive.usercontent.google.com/download?id=1pEBhC92rjczef6EiS0u8FN6RjBMbgtPs&export=download&authuser=1&confirm=t&uuid=0d0cc3a3-bb3d-4e80-a9c5-6b976bb24d3e&at=ALoNOgm7jxgxKkAAVE77wIr57_Eu:1748447049612"
   },
   "skills": {
     "technical": [  
@@ -24,6 +24,7 @@
         "Express.js",
         "MongoDB",
         "MySQL",
+        "WordPress",
         "Python",
         "SQL",
         "Swift",
@@ -69,7 +70,7 @@
   ],
   "experience": [
     {
-      "title": "Web Development",
+      "title": "Web Development and Maintainer",
       "company": "Barça Academy India",
       "location": "India",
       "startDate": "2024",
@@ -77,9 +78,12 @@
       "mode": "Hybrid",
       "description": "Working as a Web Developer for Barça Academy India, responsible for developing and maintaining the official website, ensuring a responsive, user-friendly, and visually appealing digital experience.",
       "achievements": [
-
+        "Optimized website performance and loading speed by restructuring Elementor Pro components and reducing unnecessary plugins.",
+        "Implemented dynamic content updates and improved mobile responsiveness, resulting in a 25% increase in user engagement."
       ]
     },
+
+
     
     {
       "title": "Senior Video Editor",
