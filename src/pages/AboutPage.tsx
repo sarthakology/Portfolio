@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FiDownload } from 'react-icons/fi';
 import usePortfolioData from '../hooks/usePortfolioData';
 import SectionContainer from '../components/SectionContainer';
-
+import image from '/assets/my_image.jpg';
 const AboutPage = () => {
   const { data, loading } = usePortfolioData();
 
@@ -27,7 +27,7 @@ const AboutPage = () => {
             <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6">
               <div className="relative aspect-square rounded-xl bg-gradient-to-tr from-blue-600 to-blue-400 flex items-center justify-center mb-4">
                 <div className="text-7xl text-white font-bold">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/fir-44d31.appspot.com/o/project%2FIMG_8676.jpg?alt=media&token=7b4963e4-eedd-4296-8127-ecf09154d3ae" className="relative aspect-square rounded-xl" alt="" />
+                  <img src={image} className="relative aspect-square rounded-xl" alt="Profile" />
                 </div>
               </div>
 
