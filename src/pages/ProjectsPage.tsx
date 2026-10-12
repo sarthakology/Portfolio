@@ -77,12 +77,18 @@ const ProjectsPage = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={project.imageUrl}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform hover:scale-105"
-                />
+              <div className="aspect-video overflow-hidden bg-gray-200 dark:bg-gray-700">
+                {project.imageUrl ? (
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center p-6">
+                    <span className="text-white text-xl font-bold text-center">{project.title}</span>
+                  </div>
+                )}
               </div>
 
               <div className="p-6 flex-1 flex flex-col">

@@ -1,30 +1,15 @@
-import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { FiMail, FiMapPin, FiPhone, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import type { IconType } from "react-icons";
+import { FiArrowUpRight, FiGithub, FiLinkedin, FiMail, FiMapPin, FiPhone, FiTwitter } from "react-icons/fi";
 import usePortfolioData from "../hooks/usePortfolioData";
-import SectionContainer from "../components/SectionContainer";
-import emailjs from "@emailjs/browser";
+
+const cardClass =
+  "group flex h-full flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm transition-colors hover:border-blue-500 hover:bg-white dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-400 md:p-8";
 
 const ContactPage = () => {
   const { data, loading } = usePortfolioData();
-  const [pageLoading, setPageLoading] = useState(false);
-  const form = useRef<HTMLFormElement | null>(null);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState("");
-
-  if (loading || !data || pageLoading) {
+  if (loading || !data) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-white pt-20 dark:bg-gray-900">
         <div className="animate-pulse">Loading...</div>
@@ -34,243 +19,141 @@ const ContactPage = () => {
 
   const { personal } = data;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const details: {
+    label: string;
+    value: string;
+    href: string;
+    icon: IconType;
+    external?: boolean;
+  }[] = [
+    {
+      label: "Email",
+      value: personal.email,
+      href: `mailto:${personal.email}`,
+      icon: FiMail,
+    },
+    {
+      label: "Phone",
+      value: personal.phone,
+      href: `tel:${personal.phone}`,
+      icon: FiPhone,
+    },
+    {
+      label: "Location",
+      value: personal.location,
+      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(personal.location)}`,
+      icon: FiMapPin,
+      external: true,
+    },
+  ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setPageLoading(true);
-  
-    if (!form.current) {
-      console.error("Form ref is null");
-      setPageLoading(false);
-      return;
-    }
-  
-    emailjs
-      .sendForm("service_momrrba", "template_z4fm7h2", form.current, {
-        publicKey: "5JItNzawcpi4fb6fc",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          setName("");
-          setEmail("");
-          setMsg("");
-          setPageLoading(false);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          alert("Failed to send message, please try again.");
-          setPageLoading(false);
-        }
-      );
-  };
-  
+  const socials = [
+    personal.socialLinks.github
+      ? { label: "GitHub", href: personal.socialLinks.github, icon: FiGithub }
+      : null,
+    personal.socialLinks.linkedin
+      ? { label: "LinkedIn", href: personal.socialLinks.linkedin, icon: FiLinkedin }
+      : null,
+    personal.socialLinks.twitter
+      ? { label: "Twitter", href: personal.socialLinks.twitter, icon: FiTwitter }
+      : null,
+  ].filter((item): item is { label: string; href: string; icon: IconType } => item !== null);
 
   return (
-    <div className="min-h-screen bg-white pt-20 dark:bg-gray-900">
-      <SectionContainer
-        title="Contact Me"
-        subtitle="Have a question or want to work together? Feel free to get in touch!"
-      >
-        <div className="grid gap-12 md:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+    <div className="flex min-h-screen flex-col bg-white pt-20 dark:bg-gray-900">
+      <section className="container mx-auto flex w-full flex-1 flex-col justify-center px-4 py-10 md:py-14">
+        <div className="mb-8 text-center md:mb-10">
+          <motion.h1
+            className="mb-3 text-3xl font-bold text-gray-800 dark:text-white md:text-4xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="mb-6 text-2xl font-bold text-gray-800 dark:text-white">Get in Touch</h3>
-
-            <div className="mb-8 space-y-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-blue-100 p-3 dark:bg-blue-900">
-                  <FiMail className="text-blue-600 dark:text-blue-400" size={24} />
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Email</h4>
-                  <a
-                    href={`mailto:${personal.email}`}
-                    className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-                  >
-                    {personal.email}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-blue-100 p-3 dark:bg-blue-900">
-                  <FiPhone className="text-blue-600 dark:text-blue-400" size={24} />
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Phone</h4>
-                  <a
-                    href={`tel:${personal.phone}`}
-                    className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-                  >
-                    {personal.phone}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-blue-100 p-3 dark:bg-blue-900">
-                  <FiMapPin className="text-blue-600 dark:text-blue-400" size={24} />
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-300">{personal.location}</p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="mb-4 text-lg font-semibold text-gray-800 dark:text-white">
-                Connect with me
-              </h4>
-              <div className="flex space-x-4">
-                {personal.socialLinks.github && (
-                  <a
-                    href={personal.socialLinks.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-gray-100 p-3 transition-colors hover:bg-blue-100 dark:bg-gray-800 dark:hover:bg-blue-900"
-                    aria-label="GitHub"
-                  >
-                    <FiGithub className="text-gray-800 dark:text-white" size={24} />
-                  </a>
-                )}
-
-                {personal.socialLinks.linkedin && (
-                  <a
-                    href={personal.socialLinks.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-gray-100 p-3 transition-colors hover:bg-blue-100 dark:bg-gray-800 dark:hover:bg-blue-900"
-                    aria-label="LinkedIn"
-                  >
-                    <FiLinkedin className="text-gray-800 dark:text-white" size={24} />
-                  </a>
-                )}
-
-                {personal.socialLinks.twitter && (
-                  <a
-                    href={personal.socialLinks.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-gray-100 p-3 transition-colors hover:bg-blue-100 dark:bg-gray-800 dark:hover:bg-blue-900"
-                    aria-label="Twitter"
-                  >
-                    <FiTwitter className="text-gray-800 dark:text-white" size={24} />
-                  </a>
-                )}
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            Contact Me
+          </motion.h1>
+          <motion.p
+            className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <h3 className="mb-6 text-2xl font-bold text-gray-800 dark:text-white">
-              Send Me a Message
-            </h3>
-
-            <form onSubmit={handleSubmit} className="form space-y-4" data-form ref={form}>
-              <div>
-                <label
-                  htmlFor="name"
-                  className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="user_name"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  data-form-input
-                  id="name"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  name="user_email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  data-form-input
-                  id="email"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  required
-                  value={msg}
-                  onChange={(e) => setMsg(e.target.value)}
-                  data-form-input
-                  id="message"
-                  rows={5}
-                  className="w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                data-form-btn
-                className="w-full rounded-lg bg-blue-600 px-4 py-3 font-medium text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-
-              {submitSuccess && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="rounded-lg bg-green-100 p-3 text-center text-green-800 dark:bg-green-900 dark:text-green-100"
-                >
-                  Thank you! Your message has been sent successfully.
-                </motion.div>
-              )}
-
-              {submitError && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="rounded-lg bg-red-100 p-3 text-center text-red-800 dark:bg-red-900 dark:text-red-100"
-                >
-                  {submitError}
-                </motion.div>
-              )}
-            </form>
-          </motion.div>
+            Have a question or want to work together? Feel free to get in touch!
+          </motion.p>
         </div>
-      </SectionContainer>
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+          {details.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.a
+                key={item.label}
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
+                className={cardClass}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+              >
+                <div className="mb-10 flex items-center justify-between">
+                  <div className="rounded-full bg-blue-100 p-3 dark:bg-blue-900">
+                    <Icon className="text-blue-600 dark:text-blue-400" size={24} />
+                  </div>
+                  <FiArrowUpRight
+                    className="text-gray-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue-500"
+                    size={22}
+                  />
+                </div>
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                    {item.label}
+                  </p>
+                  <p className="mt-2 break-words text-lg font-semibold text-gray-800 dark:text-white md:text-xl">
+                    {item.value}
+                  </p>
+                </div>
+              </motion.a>
+            );
+          })}
+        </div>
+
+        {socials.length > 0 && (
+          <div
+            className={`mt-4 grid grid-cols-1 gap-4 md:mt-6 md:gap-6 ${
+              socials.length > 1 ? "sm:grid-cols-2" : ""
+            }`}
+          >
+            {socials.map((item) => {
+              const Icon = item.icon;
+              const handle = item.href.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+              return (
+                <motion.a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-5 shadow-sm transition-colors hover:border-blue-500 hover:bg-white dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-400 md:p-6"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.25 }}
+                >
+                  <div className="rounded-full bg-blue-100 p-3 dark:bg-blue-900">
+                    <Icon className="text-blue-600 dark:text-blue-400" size={24} />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-semibold text-gray-800 dark:text-white">{item.label}</p>
+                    <p className="truncate text-gray-600 dark:text-gray-300">{handle}</p>
+                  </div>
+                  <FiArrowUpRight
+                    className="shrink-0 text-gray-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue-500"
+                    size={22}
+                  />
+                </motion.a>
+              );
+            })}
+          </div>
+        )}
+      </section>
     </div>
   );
 };

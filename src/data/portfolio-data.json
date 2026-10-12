@@ -1,117 +1,82 @@
 {
   "personal": {
-    "name": "Sarthak",
+    "name": "Sarthak Chauhan",
     "title": "Full Stack Developer",
-    "bio": "Full Stack Developer experienced in building CRM, payment automation, financial operations, and registration platforms using React.js, React Native, Node.js, Express.js, and MongoDB. Skilled in integrating business-critical systems including Meta Graph API, Bitrix24 CRM, PhonePe, Razorpay, and MyOperator IVR.",
+    "bio": "Full Stack Developer experienced in building end-to-end business applications, payment integrations, CRM systems, and AI-powered workflow automations. Proficient in React.js, Node.js, Express.js, and MongoDB, with hands-on experience integrating payment gateways, Bitrix24 CRM, IVR systems, Meta Graph API, n8n, and AI chatbots. Skilled in API development, business process automation, and deploying applications on hosting platforms and VPS servers.",
     "email": "thesarthakchauhan@gmail.com",
     "phone": "+91 9821823744",
-    "location": "Gurgaon, Haryana",
+    "location": "Gurugram, Haryana",
     "socialLinks": {
       "github": "https://github.com/sarthakology",
       "linkedin": "https://www.linkedin.com/in/sarthakch/",
-      "twitter": "https://twitter.com/"
+      "twitter": ""
     },
-    "resumeUrl": "https://drive.usercontent.google.com/download?id=1ydi8eXY4FhrwikbPeLhRo1mle5hknIpS&export=download&authuser=0&confirm=t&uuid=fd305e86-de86-4609-a6e7-a1d0af5b0506&at=AAINaILF1d57pz8MtzY2jY1Wf7BD:1781368279654"
+    "resumeUrl": "/Sarthak_CV_Developer.pdf"
   },
   "skills": {
     "technical": [
       "React.js",
       "React Native",
-      "Next.js",
       "JavaScript",
-      "TypeScript",
+      "Tailwind CSS",
       "Node.js",
       "Express.js",
+      "REST APIs",
+      "Webhooks",
+      "JWT",
       "MongoDB",
       "Mongoose",
-      "MySQL",
-      "REST APIs",
-      "JWT Authentication",
-      "WordPress",
-      "Elementor Pro",
-      "Tailwind CSS",
-      "HTML5",
-      "CSS3",
+      "Razorpay",
+      "PhonePe",
+      "Bitrix24 CRM",
+      "Meta Graph API",
+      "MyOperator IVR",
+      "n8n",
+      "AI Agents",
+      "LLM APIs",
+      "AI Chatbots",
+      "Workflow Automation",
+      "VPS",
+      "Domain/DNS Configuration",
+      "Render",
+      "Vercel",
+      "Hostinger",
       "Git",
       "GitHub",
       "Postman",
-      "Render",
-      "Vercel",
-      "PhonePe Integration",
-      "Razorpay Integration",
-      "Meta Graph API",
-      "Bitrix24 CRM",
-      "MyOperator IVR",
-      "Google Sheets API",
-      "Zapier",
-      "CRM Development",
-      "Payment Automation",
-      "Business Process Automation",
-      "Financial Operations Systems"
+      "WordPress"
     ],
-    "soft": [
-      "Problem Solving",
-      "Technical Leadership",
-      "Cross-functional Collaboration",
-      "Communication",
-      "Teamwork",
-      "Project Ownership",
-      "Stakeholder Management",
-      "Adaptability"
+    "soft": [],
+    "languages": [
+      "English (Professional)",
+      "Hindi (Native)"
     ]
   },
   "education": [
     {
-      "degree": "B.Tech in Computer Science Engineering",
+      "degree": "B.Tech, Computer Science Engineering",
       "institution": "Maharishi Dayanand University",
       "location": "Rohtak, Haryana",
       "startDate": "2020",
       "endDate": "2024"
-    },
-    {
-      "degree": "Higher Secondary School",
-      "institution": "GAV Public School",
-      "location": "Gurgaon, Haryana",
-      "startDate": "2020",
-      "endDate": "2019"
-    },
-    {
-      "degree": "Secondary School",
-      "institution": "GAV Public School",
-      "location": "Gurgaon, Haryana",
-      "startDate": "2018",
-      "endDate": "2017"
     }
   ],
   "experience": [
     {
-      "title": "Program Manager",
-      "company": "Barça Academy India",
-      "location": "India",
-      "startDate": "2026",
-      "endDate": "Present",
-      "mode": "Hybrid",
-      "description": "Promoted to Program Manager after leading the development of critical business systems and automation platforms. Oversee implementation of CRM, payment automation, registration, and financial operations systems while coordinating cross-functional teams across academy programs.",
-      "achievements": [
-        "Represented Barça Academy India as a Coordinator at the Barça Academy World Cup 2026 in Barcelona, Spain.",
-        "Led deployment and adoption of CRM, payment, registration, and reporting systems across multiple academy programs.",
-        "Coordinated technical and operational execution for camps across Ahmedabad, Bangalore, Hyderabad, Kolkata, Chennai, and Kochi."
-      ]
-    },
-    {
       "title": "Full Stack Developer",
       "company": "Barça Academy India",
       "location": "India",
-      "startDate": "2025",
-      "endDate": "2026",
+      "startDate": "Apr 2025",
+      "endDate": "Present",
       "mode": "Hybrid",
-      "description": "Designed and developed CRM, payment automation, financial operations, and registration platforms supporting academy programs across India using React.js, Node.js, Express.js, MongoDB, and WordPress.",
+      "description": "Develop and maintain full-stack business applications for CRM, player registration, payment processing, and financial operations using React.js, Node.js, Express.js, and MongoDB.",
       "achievements": [
-        "Built a CRM platform integrating Bitrix24 CRM, MyOperator IVR, Meta Lead Ads, and custom Node.js services.",
-        "Developed a Lead-to-Revenue Automation Platform integrating PhonePe, Razorpay, WhatsApp campaigns, email workflows, and payment recovery journeys.",
-        "Created a Financial Operations Platform for payment reconciliation, installment tracking, invoicing, and revenue reporting.",
-        "Integrated Meta Graph API conversion tracking to improve lead attribution and campaign optimization.",
-        "Developed internal dashboards and reporting tools used by Sales, Operations, Accounts, and Management teams."
+        "Integrated Razorpay and PhonePe payment gateways, Bitrix24 CRM, Meta Graph API, Facebook Lead Ads, and MyOperator IVR to connect payment, lead, and sales workflows.",
+        "Built n8n automations and integrated AI APIs and chatbots to streamline sales operations, payment follow-ups, and internal workflows.",
+        "Deployed frontend and backend applications on hosting platforms and VPS servers, configured domains and DNS, and implemented REST APIs and webhooks.",
+        "Developed technical solutions for operational workflows involving invoicing, payment reconciliation, reporting, and inventory tracking.",
+        "Represented Barça Academy India as a Coordinator at the Barça Academy World Cup 2026 in Barcelona, Spain.",
+        "Coordinated registration, payment tracking, parent communication, and operational processes for academy camps across Ahmedabad, Bangalore, Hyderabad, Mumbai, Kolkata, Chennai, and Kochi."
       ]
     },
     {
@@ -134,15 +99,12 @@
       "title": "Web & Mobile Developer Intern",
       "company": "Centre for Development of Advanced Computing (C-DAC)",
       "location": "India",
-      "startDate": "2024",
-      "endDate": "2025",
+      "startDate": "Jul 2024",
+      "endDate": "Apr 2025",
       "mode": "On-site",
-      "description": "Contributed to government technology projects including the Census Project while developing full-stack web and mobile applications using React.js, React Native, Node.js, Express.js, and MongoDB.",
+      "description": "Contributed to government technology projects, including the Census Project, developing dashboard interfaces and application features using React.js and React Native.",
       "achievements": [
-        "Developed dashboard interfaces and reusable frontend architecture for government technology initiatives.",
-        "Built JWT authentication, role-based access control, notifications, and REST API integrations.",
-        "Developed web and mobile calendar applications with event scheduling, task management, and guest invitation workflows.",
-        "Established scalable project structures and frontend development standards."
+        "Worked on authentication, notifications, frontend components, and REST API integrations using Node.js, Express.js, and MongoDB."
       ]
     },
     {
@@ -162,26 +124,44 @@
   ],
   "projects": [
     {
+      "title": "MERN Stack CRM & Sales Automation",
+      "description": "Built an integrated CRM workflow connecting Bitrix24, Meta Lead Ads, and MyOperator IVR for lead synchronization, caller assignment, and sales tracking.",
+      "technologies": ["Node.js", "n8n", "APIs", "Bitrix24", "MongoDB"],
+      "imageUrl": "",
+      "liveUrl": "",
+      "repoUrl": "",
+      "featured": true
+    },
+    {
+      "title": "Payment & AI Automation",
+      "description": "Integrated PhonePe and Razorpay payment workflows with automated status tracking, reconciliation, follow-ups, and AI-powered operational workflows.",
+      "technologies": ["Node.js", "PhonePe", "Razorpay", "n8n", "AI APIs"],
+      "imageUrl": "",
+      "liveUrl": "",
+      "repoUrl": "",
+      "featured": true
+    },
+    {
       "title": "Stadium Ticket Booking System",
       "description": "Built a modern ticket booking platform for sports events featuring an interactive stadium seating interface, dynamic section selection, ticket availability tracking, pricing visualization, and responsive user experiences. Designed the frontend architecture to support future integration with booking, payment, and seat management workflows.",
       "technologies": ["React", "Tailwind CSS"],
       "imageUrl": "/assets/Staduim.png",
       "liveUrl": "https://stadium-ticket-booking-system.vercel.app/",
       "repoUrl": "https://github.com/sarthakology/Stadium_Ticket_booking_system",
-      "featured": true
+      "featured": false
     },
     {
-      "title": "snake game",
-      "description": "An engaging Snake game built with React.js, featuring smooth controls, dynamic gameplay, and responsive design. Navigate the snake, collect points, and avoid collisions in this interactive web-based game. Designed for an immersive experience, it showcases React’s state management and rendering capabilities for seamless performance across devices.",
+      "title": "Snake Game",
+      "description": "An engaging Snake game built with React.js, featuring smooth controls, dynamic gameplay, and responsive design. Navigate the snake, collect points, and avoid collisions in this interactive web-based game.",
       "technologies": ["React"],
       "imageUrl": "/assets/Snake.png",
       "liveUrl": "https://snake-game-puce-three.vercel.app",
       "repoUrl": "https://github.com/sarthakology/snake-game",
-      "featured": true
+      "featured": false
     },
     {
-      "title": "Dice bet",
-      "description": "A Dice Bet app built with React.js where users place bets on a dice roll to win or lose points. Featuring an intuitive UI, real-time updates, and dynamic animations, the app provides an exciting gambling-like experience while showcasing React's state management and event handling for smooth gameplay.",
+      "title": "Dice Bet",
+      "description": "A Dice Bet app built with React.js where users place bets on a dice roll to win or lose points. Featuring an intuitive UI, real-time updates, and dynamic animations.",
       "technologies": ["React"],
       "imageUrl": "/assets/Dice_Bet.png",
       "liveUrl": "https://sarthakology.github.io/dice-bet/",

@@ -18,6 +18,7 @@ export interface PersonalInfo {
 export interface Skills {
   technical: string[];
   soft: string[];
+  languages: string[];
 }
 
 export interface Education {

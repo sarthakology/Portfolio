@@ -30,11 +30,17 @@ const FeaturedProjects = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden">
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform hover:scale-105"
-              />
+              {project.imageUrl ? (
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center p-6">
+                  <span className="text-white text-2xl font-bold text-center">{project.title}</span>
+                </div>
+              )}
             </div>
 
             <div className="p-6">

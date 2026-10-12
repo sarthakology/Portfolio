@@ -9,12 +9,12 @@ const Skills = () => {
     return <div className="py-16 bg-white dark:bg-gray-900"></div>;
   }
 
-  const { technical, soft } = data.skills;
+  const { technical, languages } = data.skills;
 
   return (
     <SectionContainer
       title="My Skills"
-      subtitle="Here are the technologies and tools I work with, along with soft skills that help me collaborate effectively."
+      subtitle="Technologies and tools I use to build applications, integrations, and automations."
     >
       <div className="grid md:grid-cols-2 gap-8">
         <motion.div
@@ -51,13 +51,13 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
         >
           <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
-            Soft Skills
+            Languages
           </h3>
 
           <div className="space-y-4">
-            {soft.map((skill, index) => (
+            {languages.map((language, index) => (
               <motion.div
-                key={skill}
+                key={language}
                 className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const Skills = () => {
                 whileHover={{ scale: 1.02, backgroundColor: '#EBF5FF', color: '#1E40AF' }}
               >
                 <h4 className="font-semibold text-lg text-gray-800 dark:text-white">
-                  {skill}
+                  {language}
                 </h4>
               </motion.div>
             ))}
